@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+  d3.xml("banekort.svg", "image/svg+xml", function(xml) {
+    document.body.appendChild(xml.documentElement);
+
+    start = d3.select("#circle-hundige");
+    end = d3.select("#circle-sydhavnen");
+
+    // Create circle at start location
+    var mycircle = d3.select("svg")
+      .append("g")
+      .append("circle")
+        .attr("r", 2.5)
+        .attr("class", "train-a")
+        .attr("cx", start.attr("cx"))
+        .attr("cy", start.attr("cy"));
+
+    // Animate circle coordinates (Move from start to end)
+    d3.select(".train-a").transition()
+      .duration(5000)
+      .attr("cx", end.attr("cx"))
+      .attr("cy", end.attr("cy"));
+  });
+</script>
+</body>
+</html>
