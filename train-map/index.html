@@ -10,9 +10,10 @@
 
     start = d3.select("#circle-hundige");
     end = d3.select("#circle-sydhavnen");
+    svg = d3.select("svg");
 
     // Create circle at start location
-    var mycircle = d3.select("svg")
+    var mycircle = svg
       .append("g")
       .append("circle")
         .attr("r", 2.5)
@@ -20,11 +21,32 @@
         .attr("cx", start.attr("cx"))
         .attr("cy", start.attr("cy"));
 
+    // Fade overlay
+    /*svg
+      .append("g")
+      .append("rect")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", 600)
+      .attr("height", 600)
+      .attr("opacity", 0.5)
+      .style("fill", "white");*/
+
     // Animate circle coordinates (Move from start to end)
     d3.select(".train-a").transition()
       .duration(5000)
       .attr("cx", end.attr("cx"))
       .attr("cy", end.attr("cy"));
+
+    // Lane muse-hover animation
+    d3.select("#a-lane").on("mouseover", function(d) {
+      lane = d3.select(this);
+      oldcolor = lane.style("stroke");
+      lane.style("stroke", "black");
+      lane.on("mouseout", function(d) {
+        d3.select(this).style("stroke", oldcolor);
+      });
+    });
   });
 </script>
 </body>
