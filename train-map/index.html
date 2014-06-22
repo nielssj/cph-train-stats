@@ -5,11 +5,24 @@
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
+  d3.selection.prototype.moveToFront = function() {
+    return this.each(function(){      
+      parent = this.parentNode;
+      if(parent.parentNode.nodeName == "g") {
+        parent.parentNode.parentNode.appendChild(parent);
+      } else if(parent.nodeName == "g") {
+        parent.parentNode.appendChild(parent);
+      } else {
+        this.parentNode.appendChild(this);  
+      }
+    });
+  };
+
   d3.xml("banekort.svg", "image/svg+xml", function(xml) {
     document.body.appendChild(xml.documentElement);
 
-    start = d3.select("#circle-hundige");
-    end = d3.select("#circle-sydhavnen");
+    start = d3.select("#circle-a-hundige");
+    end = d3.select("#circle-a-sydhavnen");
     svg = d3.select("svg");
 
     // Create circle at start location
@@ -21,17 +34,6 @@
         .attr("cx", start.attr("cx"))
         .attr("cy", start.attr("cy"));
 
-    // Fade overlay
-    /*svg
-      .append("g")
-      .append("rect")
-      .attr("x", 0)
-      .attr("y", 0)
-      .attr("width", 600)
-      .attr("height", 600)
-      .attr("opacity", 0.5)
-      .style("fill", "white");*/
-
     // Animate circle coordinates (Move from start to end)
     d3.select(".train-a").transition()
       .duration(5000)
@@ -39,12 +41,17 @@
       .attr("cy", end.attr("cy"));
 
     // Lane muse-hover animation
-    d3.select("#a-lane").on("mouseover", function(d) {
+    d3.selectAll(".lane-a-group").on("mouseover", function(d) {
       lane = d3.select(this);
       oldcolor = lane.style("stroke");
-      lane.style("stroke", "black");
+
+      // Fade overlay
+      d3.select("#fade-overlay").style("display", "");
+
+      d3.selectAll(".lane-a-group").moveToFront();
+
       lane.on("mouseout", function(d) {
-        d3.select(this).style("stroke", oldcolor);
+        d3.select("#fade-overlay").style("display", "none");
       });
     });
   });
