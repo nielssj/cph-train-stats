@@ -40,20 +40,54 @@
       .attr("cx", end.attr("cx"))
       .attr("cy", end.attr("cy"));
 
-    // Lane muse-hover animation
-    d3.selectAll(".lane-a-group").on("mouseover", function(d) {
+    resetFocus = function(d) {
+      overlay = d3.select("#fade-overlay");
+      overlay.transition().style("opacity", 0);
+      d3.timer(function() {
+        overlay.style("display", "none"); 
+        return true; 
+      }, 250);
+    }
+
+    bringToFocus = function(d) {
       lane = d3.select(this);
       oldcolor = lane.style("stroke");
 
-      // Fade overlay
-      d3.select("#fade-overlay").style("display", "");
-
       d3.selectAll(".lane-a-group").moveToFront();
 
-      lane.on("mouseout", function(d) {
-        d3.select("#fade-overlay").style("display", "none");
+      // Fade overlay
+      overlay = d3.select("#fade-overlay");
+      overlay.style("display", "");
+      overlay.transition().style("opacity", 0.6);
+
+      lane.on("mouseout", resetFocus);
+    }
+
+    stayInFocus = function(d) {
+      lane = d3.select(this);
+      items = d3.selectAll(".lane-a-group");
+
+      // Disable hover listeners
+      items.on("mouseover", null)
+      items.on("mouseout", null)
+
+      // Add click listener to reactivate
+      lane.on("click", function() {
+        lane.on("click", stayInFocus);
+        lane.on("mouseout", function(d) {
+          lane.on("mouseover", bringToFocus);
+          resetFocus()
+        });
       });
-    });
+    }
+
+    // Lane mouse-hover animation
+    d3.selectAll(".lane-a-group")
+      .on("mouseover", bringToFocus);
+
+    // Stay focused on click
+    d3.select("#lane-a")
+      .on("click", stayInFocus);
   });
 </script>
 </body>
