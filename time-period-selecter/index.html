@@ -121,6 +121,9 @@
     depdelay = d3.select("#tp-depdelay");
     arrdelay = d3.select("#tp-arrdelay");
 
+    // Assign data to slices
+    slices.data(routedata.hourstats);
+
     // Set title labels
     d3.select("#tp-weekday").text(routedata.weekday);
     d3.select("#tp-route-name").text(routedata.name);
@@ -129,13 +132,12 @@
     slices.select("text").style("display", "none");
 
     // Mouse-over change stats and animate
-    slices.on("mouseover", function (d, i) {
+    slices.on("mouseover", function (data, i) {
       // Change stats displayed
-      stats = routedata.hourstats[i];
-      traincount.text(stats.trains + " trains");
-      travel.text(humanizeDuration(stats.travel * 1000));
-      depdelay.text(humanizeDuration(stats.depdelay * 1000));
-      arrdelay.text(humanizeDuration(stats.arrdelay * 1000));
+      traincount.text(data.trains + " trains");
+      travel.text(humanizeDuration(data.travel * 1000));
+      depdelay.text(humanizeDuration(data.depdelay * 1000));
+      arrdelay.text(humanizeDuration(data.arrdelay * 1000));
 
       // Animate slice "pop-out"
       d3.select(this).select("path")
@@ -160,6 +162,7 @@
         .attr("transform", "matrix(1.4977753,0,0,1.5077569,-486.81003,-637.66197)");
     });
 
+    // Color slices according to average travel time
     colors = ["#0FFF36", "#B1E802", "#FFCD0F", "#E87E1B", "#FF3220"];
     colorchoice = function (d, i) {
       val = d3.select(this.parentNode).data()[0].travel
@@ -169,10 +172,7 @@
       groupid = Math.round(delta / psize);
       return colors[groupid];
     }
-
-    slices.data(routedata.hourstats);
     slices.select("path").style("fill", colorchoice);
-
   });
 
 </script>
