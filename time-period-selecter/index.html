@@ -136,7 +136,9 @@
 
     slices.on("mouseout", function (d, i) {
       // Animate slice back "pop-in" (and hide label)
-      d3.select(this).select("text").style("display", "none");
+      d3.select(this).select("text")
+        .transition()
+        .style("display", "none");
       d3.select(this).select("path")
         .transition()
         .duration(250)
