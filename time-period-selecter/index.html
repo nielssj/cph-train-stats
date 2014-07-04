@@ -127,6 +127,7 @@
       // Animate slice "pop-out"
       d3.select(this).select("path")
         .transition()
+        .ease(d3.ease("exp"))
         .duration(250)
         .attr("transform", "matrix(1.7927899,0,0,1.8047376,-602.62583,-805.96519)")
         .each("end", function() {
@@ -141,6 +142,7 @@
         .style("display", "none");
       d3.select(this).select("path")
         .transition()
+        .ease(d3.ease("exp"))
         .duration(250)
         .attr("transform", "matrix(1.4977753,0,0,1.5077569,-486.81003,-637.66197)");
     });
