@@ -3,7 +3,8 @@
 <html>
 <body>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+<script src="node_modules/d3/d3.js"></script>
 <script src="node_modules/humanize-duration/humanize-duration.js"></script>
 <script>
   routedata = {
@@ -158,6 +159,20 @@
         .duration(250)
         .attr("transform", "matrix(1.4977753,0,0,1.5077569,-486.81003,-637.66197)");
     });
+
+    colors = ["#0FFF36", "#B1E802", "#FFCD0F", "#E87E1B", "#FF3220"];
+    colorchoice = function (d, i) {
+      val = d3.select(this.parentNode).data()[0].travel
+      span = routedata.travel.max - routedata.travel.min;
+      psize = span / 4;
+      delta = val - routedata.travel.min
+      groupid = Math.round(delta / psize);
+      return colors[groupid];
+    }
+
+    slices.data(routedata.hourstats);
+    slices.select("path").style("fill", colorchoice);
+
   });
 
 </script>
