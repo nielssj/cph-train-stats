@@ -1,0 +1,15 @@
+{
+  "name": "time-period-selecter",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "humanize-duration": "^0.8.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Niels Søholm (nm@9la.dk)",
+  "license": "ISC"
+}
