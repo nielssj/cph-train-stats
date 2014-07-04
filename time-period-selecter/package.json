@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
-    "humanize-duration": "^0.8.2"
+    "humanize-duration": "https://github.com/nielssj/HumanizeDuration.js/tarball/e864c3ead2ea373b7ca61e12fd5d6cccf5c81c37"
   },
   "devDependencies": {},
   "scripts": {
