@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="770.1969"
-   height="507.09894"
+   width="836.28955"
+   height="523.8703"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="time-period-selecter-basic-plain2.svg">
+   sodipodi:docname="time-period-selecter-basic.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.25"
-     inkscape:cx="547.91503"
-     inkscape:cy="257.03753"
+     inkscape:cx="564.00763"
+     inkscape:cy="273.8089"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -37,7 +37,7 @@
      inkscape:window-maximized="1"
      fit-margin-top="15"
      fit-margin-left="40"
-     fit-margin-right="0"
+     fit-margin-right="50"
      fit-margin-bottom="40" />
   <metadata
      id="metadata7">
@@ -55,7 +55,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(139.92593,73.507755)">
+     transform="translate(156.01853,73.507755)">
     <g
        id="tp-slices">
       <g
@@ -69,7 +69,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 325.53573,463.15202 a 131.07143,117.85714 0 0 1 65.53571,-15.78986 l 0,117.85714 z"
+           d="m 325.53573,463.15202 c 19.92537,-10.34412 42.52787,-15.78986 65.53571,-15.78986 l 0,117.85714 z"
            sodipodi:start="4.1887902"
            sodipodi:end="4.712389"
            class="tp-slice" />
@@ -109,7 +109,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 277.56025,506.29073 a 131.07143,117.85714 0 0 1 47.97548,-43.13871 l 65.53571,102.06728 z"
+           d="m 277.56025,506.29073 c 11.50393,-17.91655 28.0501,-32.79458 47.97548,-43.13871 l 65.53571,102.06728 z"
            sodipodi:start="3.6651914"
            sodipodi:end="4.1887902"
            transform="matrix(1.4977753,0,0,1.5077569,-486.81003,-637.66197)"
@@ -151,7 +151,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 260.00002,565.21929 a 131.07143,117.85714 0 0 1 17.56023,-58.92856 l 113.51119,58.92857 z"
+           d="m 260.00002,565.21929 c 0,-20.68824 6.05632,-41.01201 17.56023,-58.92856 l 113.51119,58.92857 z"
            sodipodi:start="3.1415927"
            sodipodi:end="3.6651914"
            class="tp-slice" />
@@ -192,7 +192,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 277.56026,624.14787 a 131.07143,117.85714 0 0 1 -17.56024,-58.92858 l 131.07142,10e-6 z"
+           d="m 277.56026,624.14787 c -11.50393,-17.91655 -17.56025,-38.24033 -17.56024,-58.92858 l 131.07142,10e-6 z"
            sodipodi:start="2.6179939"
            sodipodi:end="3.1415927"
            class="tp-slice" />
@@ -231,7 +231,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="M 325.53573,667.28658 A 131.07143,117.85714 0 0 1 277.56026,624.14787 L 391.07144,565.2193 z"
+           d="M 325.53573,667.28658 C 305.61035,656.94245 289.06418,642.06442 277.56026,624.14787 L 391.07144,565.2193 z"
            sodipodi:start="2.0943951"
            sodipodi:end="2.6179939"
            class="tp-slice" />
@@ -270,7 +270,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="M 391.07145,683.07644 A 131.07143,117.85714 0 0 1 325.53573,667.28658 L 391.07144,565.2193 z"
+           d="m 391.07145,683.07644 c -23.00785,0 -45.61035,-5.44574 -65.53572,-15.78986 L 391.07144,565.2193 z"
            sodipodi:start="1.5707963"
            sodipodi:end="2.0943951"
            class="tp-slice" />
@@ -309,7 +309,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 456.60715,667.28658 a 131.07143,117.85714 0 0 1 -65.5357,15.78986 l -1e-5,-117.85714 z"
+           d="m 456.60715,667.28658 c -19.92537,10.34412 -42.52787,15.78986 -65.5357,15.78986 l -1e-5,-117.85714 z"
            sodipodi:start="1.0471976"
            sodipodi:end="1.5707963"
            class="tp-slice" />
@@ -348,7 +348,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 504.58263,624.14787 a 131.07143,117.85714 0 0 1 -47.97548,43.13871 L 391.07144,565.2193 z"
+           d="m 504.58263,624.14787 c -11.50393,17.91655 -28.0501,32.79458 -47.97548,43.13871 L 391.07144,565.2193 z"
            sodipodi:start="0.52359878"
            sodipodi:end="1.0471976"
            class="tp-slice" />
@@ -386,7 +386,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 522.14287,565.2193 a 131.07143,117.85714 0 0 1 -17.56024,58.92857 L 391.07144,565.2193 z"
+           d="m 522.14287,565.2193 c 0,20.68825 -6.05632,41.01202 -17.56024,58.92857 L 391.07144,565.2193 z"
            sodipodi:start="0"
            sodipodi:end="0.52359878"
            transform="matrix(1.5,0,0,1.5,-487.67595,-633.27348)"
@@ -426,7 +426,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 504.58262,506.29073 a 131.07143,117.85714 0 0 1 17.56025,58.92857 l -131.07143,0 z"
+           d="m 504.58262,506.29073 c 11.50393,17.91655 17.56025,38.24032 17.56025,58.92857 l -131.07143,0 z"
            sodipodi:start="5.7595865"
            sodipodi:end="6.2831853"
            class="tp-slice" />
@@ -467,7 +467,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 456.60716,463.15203 a 131.07143,117.85714 0 0 1 47.97546,43.1387 L 391.07144,565.2193 z"
+           d="m 456.60716,463.15203 c 19.92537,10.34412 36.47155,25.22215 47.97546,43.1387 L 391.07144,565.2193 z"
            sodipodi:start="5.2359878"
            sodipodi:end="5.7595865"
            class="tp-slice" />
@@ -508,7 +508,7 @@
            sodipodi:cy="565.2193"
            sodipodi:rx="131.07143"
            sodipodi:ry="117.85714"
-           d="m 391.07144,447.36216 a 131.07143,117.85714 0 0 1 65.53572,15.78987 L 391.07144,565.2193 z"
+           d="m 391.07144,447.36216 c 23.00785,0 45.61034,5.44574 65.53572,15.78987 L 391.07144,565.2193 z"
            sodipodi:start="4.712389"
            sodipodi:end="5.2359878"
            class="tp-slice" />
@@ -529,7 +529,7 @@
              style="font-size:15px;font-weight:bold;line-height:100%;fill:#000000;fill-opacity:0.2984293">12:00</tspan><tspan
              sodipodi:role="line"
              x="131.26897"
-             y="10.061242"
+             y="10.061243"
              id="tspan5870-0"
              style="font-size:15px;font-weight:bold;line-height:100%;fill:#000000;fill-opacity:0.2984293">   -</tspan><tspan
              sodipodi:role="line"
@@ -693,7 +693,7 @@
          style="font-size:18px"
          id="tspan5595"><tspan
            style="font-weight:bold"
-           id="tspan5601"></tspan></tspan><tspan
+           id="tspan5601" /></tspan><tspan
          y="132.38336"
          x="344.13428"
          sodipodi:role="line"
@@ -709,14 +709,14 @@
    style="font-weight:bold"
    id="tp-depdelay">2 minutes</tspan>.   <tspan
    style="font-weight:bold"
-   id="tspan5605"></tspan></tspan><tspan
+   id="tspan5605" /></tspan><tspan
          y="177.38336"
          x="344.13428"
          sodipodi:role="line"
          style="font-size:18px"
          id="tspan5635"><tspan
            style="font-weight:bold"
-           id="tspan5637"></tspan></tspan><tspan
+           id="tspan5637" /></tspan><tspan
          y="199.88336"
          x="344.13428"
          sodipodi:role="line"
@@ -725,7 +725,7 @@
    style="font-weight:bold"
    id="tspan5645">Arrival</tspan> is usually delayed by <tspan
    style="font-weight:bold"
-   id="tspan5607"></tspan></tspan><tspan
+   id="tspan5607" /></tspan><tspan
          y="222.38336"
          x="344.13428"
          sodipodi:role="line"
@@ -737,7 +737,7 @@
          x="344.13428"
          sodipodi:role="line"
          style="font-size:18px"
-         id="tspan5658"></tspan><tspan
+         id="tspan5658" /><tspan
          y="267.38336"
          x="344.13428"
          sodipodi:role="line"
@@ -746,7 +746,7 @@
    style="font-weight:bold"
    id="tspan5609">travel time </tspan>is around <tspan
    style="font-weight:bold"
-   id="tspan5611"></tspan></tspan><tspan
+   id="tspan5611" /></tspan><tspan
          y="289.88336"
          x="344.13428"
          sodipodi:role="line"
@@ -758,7 +758,7 @@
          x="344.13428"
          sodipodi:role="line"
          style="font-size:18px"
-         id="tspan5673"></tspan><tspan
+         id="tspan5673" /><tspan
          y="334.88336"
          x="344.13428"
          sodipodi:role="line"
@@ -786,7 +786,7 @@
          x="107.39906"
          y="-40.27338">Monday  <tspan
    style="font-size:21px;font-weight:bold"
-   id="tspan5717"></tspan></tspan><tspan
+   id="tspan5717" /></tspan><tspan
          sodipodi:role="line"
          style="font-size:24px;font-weight:bold"
          id="tspan5719"

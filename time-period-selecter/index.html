@@ -4,6 +4,7 @@
 <body>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="node_modules/humanize-duration/humanize-duration.js"></script>
 <script>
   routedata = {
     name: "Nørreport - Ballerup",
@@ -116,9 +117,9 @@
       // Change stats displayed
       stats = routedata.hourstats[i];
       traincount.text(stats.trains + " trains");
-      travel.text(stats.travel + " seconds");
-      depdelay.text(stats.depdelay + " seconds");
-      arrdelay.text(stats.arrdelay + " seconds");
+      travel.text(humanizeDuration(stats.travel * 1000));
+      depdelay.text(humanizeDuration(stats.depdelay * 1000));
+      arrdelay.text(humanizeDuration(stats.arrdelay * 1000));
 
       // Animate slice "pop-out"
       d3.select(this).select("path")
