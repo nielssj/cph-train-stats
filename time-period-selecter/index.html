@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+  routedata = {
+    name: "Nørreport - Ballerup",
+    weekday: "Monday",
+    trains: 400,
+    travel: 780,
+    depdelay: 120,
+    arrdelay: 30,
+    hourstats: [
+      {
+        trains: 12,
+        travel: 796,
+        depdelay: 113,
+        arrdelay: 30
+      },
+      {
+        trains: 15,
+        travel: 765,
+        depdelay: 114,
+        arrdelay: 33
+
+      },
+      {
+        trains: 14,
+        travel: 761,
+        depdelay: 119,
+        arrdelay: 25
+
+      },
+      {
+        trains: 13,
+        travel: 766,
+        depdelay: 129,
+        arrdelay: 25
+
+      },
+      {
+        trains: 10,
+        travel: 790,
+        depdelay: 116,
+        arrdelay: 32
+
+      },
+      {
+        trains: 8,
+        travel: 776,
+        depdelay: 116,
+        arrdelay: 33
+
+      },
+      {
+        trains: 12,
+        travel: 769,
+        depdelay: 127,
+        arrdelay: 26
+
+      },
+      {
+        trains: 20,
+        travel: 763,
+        depdelay: 130,
+        arrdelay: 29
+
+      },
+      {
+        trains: 22,
+        travel: 788,
+        depdelay: 116,
+        arrdelay: 27
+
+      },
+      {
+        trains: 22,
+        travel: 779,
+        depdelay: 126,
+        arrdelay: 27
+
+      },
+      {
+        trains: 18,
+        travel: 781,
+        depdelay: 123,
+        arrdelay: 34
+
+      },
+      {
+        trains: 16,
+        travel: 778,
+        depdelay: 120,
+        arrdelay: 31
+
+      },
+    ]
+  };
+
+  d3.xml("time-period-selecter-basic.svg", "image/svg+xml", function(xml) {
+    document.body.appendChild(xml.documentElement);
+
+    slices = d3.selectAll("#tp-slices > g");
+    traincount = d3.select("#tp-train-count");
+    travel = d3.select("#tp-travel");
+    depdelay = d3.select("#tp-depdelay");
+    arrdelay = d3.select("#tp-arrdelay");
+
+    // Hide hour range labels by default
+    slices.select("text").style("display", "none");
+
+    // Mouse-over change stats and animate
+    slices.on("mouseover", function (d, i) {
+      // Change stats displayed
+      stats = routedata.hourstats[i];
+      traincount.text(stats.trains + " trains");
+      travel.text(stats.travel + " seconds");
+      depdelay.text(stats.depdelay + " seconds");
+      arrdelay.text(stats.arrdelay + " seconds");
+
+      // Animate slice "pop-out"
+      d3.select(this).select("path")
+        .transition()
+        .duration(250)
+        .attr("transform", "matrix(1.7927899,0,0,1.8047376,-602.62583,-805.96519)")
+        .each("end", function() {
+          d3.select(this.parentNode).select("text").style("display", "");
+        });
+    });
+
+    slices.on("mouseout", function (d, i) {
+      // Animate slice back "pop-in" (and hide label)
+      d3.select(this).select("text").style("display", "none");
+      d3.select(this).select("path")
+        .transition()
+        .duration(250)
+        .attr("transform", "matrix(1.4977753,0,0,1.5077569,-486.81003,-637.66197)");
+    });
+  });
+
+</script>
+</body>
+</html>
