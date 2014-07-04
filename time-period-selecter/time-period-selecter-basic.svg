@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.25"
-     inkscape:cx="564.00763"
+     inkscape:cx="565.60763"
      inkscape:cy="273.8089"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -781,7 +781,7 @@
        id="text5713"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5715"
+         id="tp-weekday"
          style="font-size:24px;font-weight:bold"
          x="107.39906"
          y="-40.27338">Monday  <tspan
@@ -793,6 +793,6 @@
          x="103.22719"
          y="-13.263628"><tspan
            style="font-size:21px;font-weight:bold"
-           id="tspan5721">Nørreport - Vanløse</tspan></tspan></text>
+           id="tp-route-name">Nørreport - Vanløse</tspan></tspan></text>
   </g>
 </svg>

@@ -102,12 +102,15 @@
 
   d3.xml("time-period-selecter-basic.svg", "image/svg+xml", function(xml) {
     document.body.appendChild(xml.documentElement);
-
     slices = d3.selectAll("#tp-slices > g");
     traincount = d3.select("#tp-train-count");
     travel = d3.select("#tp-travel");
     depdelay = d3.select("#tp-depdelay");
     arrdelay = d3.select("#tp-arrdelay");
+
+    // Set title labels
+    d3.select("#tp-weekday").text(routedata.weekday);
+    d3.select("#tp-route-name").text(routedata.name);
 
     // Hide hour range labels by default
     slices.select("text").style("display", "none");
