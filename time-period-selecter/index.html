@@ -18,7 +18,7 @@
     },
     depdelay: {
       avg: 120,
-      min: 133,
+      min: 113,
       max: 130
     },
     arrdelay: {
@@ -113,7 +113,7 @@
     ]
   };
 
-  d3.xml("time-period-selecter-basic.svg", "image/svg+xml", function(xml) {
+  d3.xml("time-period-selecter-extended.svg", "image/svg+xml", function(xml) {
     document.body.appendChild(xml.documentElement);
     slices = d3.selectAll("#tp-slices > g");
     traincount = d3.select("#tp-train-count");
@@ -163,16 +163,31 @@
     });
 
     // Color slices according to average travel time
-    colors = ["#0FFF36", "#B1E802", "#FFCD0F", "#E87E1B", "#FF3220"];
+    //colors = ["#0FFF36", "#B1E802", "#FFCD0F", "#E87E1B", "#FF3220"];
+    colors = ["#51FF69", "#C4E83E", "#FFD951", "#E89B56", "#FF6C61"];
     colorchoice = function (d, i) {
-      val = d3.select(this.parentNode).data()[0].travel
       span = routedata.travel.max - routedata.travel.min;
       psize = span / 4;
-      delta = val - routedata.travel.min
+      delta = d.travel - routedata.travel.min
       groupid = Math.round(delta / psize);
       return colors[groupid];
     }
-    slices.select("path").style("fill", colorchoice);
+    colorwrap = function (d, i) {
+      val = d3.select(this.parentNode).data()[0];
+      return colorchoice(val, i);
+    }
+    slices.select("path").style("fill", colorwrap);
+
+    // Animate bar chart
+    depdelaybars = d3.selectAll("#diag-depdelay-bars > rect");
+    depdelaybars.data(routedata.hourstats);
+    depdelaybars.attr("height", function(d, i) {
+      span = routedata.depdelay.max - routedata.depdelay.min;
+      delta = d.depdelay - routedata.depdelay.min;
+      return 164 * ((delta + 1) / span);
+    });
+    depdelaybars.style("fill", colorchoice);
+
   });
 
 </script>
