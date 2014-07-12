@@ -188,6 +188,17 @@
     });
     depdelaybars.style("fill", colorchoice);
 
+    // Dark theme
+    applyDarkTheme = function() {
+      d3.select("body").style("background-color", "rgb(53, 53, 53)")
+      d3.selectAll("text").style("fill", "#E0E0E0");
+      d3.selectAll(".tp-slice").style("stroke", "rgb(53, 53, 53)");
+      d3.selectAll("#g7422 > path").style("fill", "rgb(53, 53, 53)");
+      d3.selectAll("#g7422 > path").style("stroke", "rgb(53, 53, 53)");
+      d3.selectAll("#g6953 > path").style("stroke", "#E0E0E0");
+      d3.selectAll("#g7393 > g > path").style("fill", "#E0E0E0");
+      d3.selectAll("#text4114-4-3 > g > path").style("fill", "#E0E0E0")
+    }
   });
 
 </script>
