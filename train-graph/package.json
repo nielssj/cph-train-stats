@@ -1,0 +1,16 @@
+{
+  "name": "train-graph",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "humanize-duration": "https://github.com/nielssj/HumanizeDuration.js/tarball/e864c3ead2ea373b7ca61e12fd5d6cccf5c81c37",
+    "d3": "3.4.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Niels Søholm (nm@9la.dk)",
+  "license": "ISC"
+}
